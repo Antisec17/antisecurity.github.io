@@ -3,141 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anti Security | Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <title>Anti Security</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
     body {
-      background: #0e0e0e;
-      color: #f0f0f0;
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: black;
+      color: white;
       overflow-x: hidden;
     }
-
-    section {
-      min-height: 100vh;
+    header {
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
-      scroll-snap-align: start;
-      padding: 3rem;
-      perspective: 1000px;
-    }
-
-    .section-title {
-      font-size: 3rem;
+      background: linear-gradient(135deg, #0f0f0f, #050505);
       text-align: center;
-      margin-bottom: 2rem;
+      animation: flicker 3s infinite alternate;
     }
-
-    .hero {
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    section {
+      padding: 5rem 2rem;
+      display: flex;
       flex-direction: column;
-      animation: enterComputer 2s ease-in;
+      align-items: center;
     }
-
-    .section-pattern {
-      background: radial-gradient(circle, rgba(33,33,33,1) 0%, rgba(14,14,14,1) 100%);
-      position: relative;
-      overflow: hidden;
-      transform: rotateX(10deg);
-      animation: screenIn 2s ease forwards;
+    .glitch {
+      font-size: 2rem;
+      color: #0f0;
+      text-shadow: 2px 2px #f00, -2px -2px #00f;
+      animation: glitch 0.6s infinite;
     }
-
-    .pattern {
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      background-image: repeating-radial-gradient(
-        circle at center,
-        #222 0px,
-        #111 1px,
-        transparent 2px
-      );
-      animation: rotate 30s linear infinite;
+    .ascii {
+      white-space: pre-wrap;
+      font-family: monospace;
+      background: #111;
+      padding: 2rem;
+      border: 1px solid #333;
+      max-width: 90vw;
+      overflow-x: auto;
+    }
+    .bg-image {
+      background-image: url('af8ffcde-e32c-430a-8742-f91d7ed95489.png');
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 60vh;
+      margin: 3rem 0;
       opacity: 0.1;
     }
-
-    .content {
-      z-index: 1;
-      max-width: 800px;
-      text-align: center;
-      transform: translateZ(60px);
-      animation: fadeIn 1.5s ease-in-out;
+    .fadeIn {
+      animation: fadeInUp 2s ease-out forwards;
+      opacity: 0;
     }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes enterComputer {
-      0% {
-        transform: scale(0.9) rotateX(40deg);
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(40px);
         opacity: 0;
       }
-      100% {
-        transform: scale(1) rotateX(0);
+      to {
+        transform: translateY(0);
         opacity: 1;
       }
     }
-
-    @keyframes screenIn {
+    @keyframes glitch {
       0% {
-        transform: rotateX(80deg);
-        opacity: 0;
+        text-shadow: 2px 2px #f00, -2px -2px #00f;
+      }
+      20% {
+        text-shadow: -2px 2px #0f0, 2px -2px #f0f;
+      }
+      40% {
+        text-shadow: 2px -2px #0ff, -2px 2px #ff0;
+      }
+      60% {
+        text-shadow: -2px -2px #fff, 2px 2px #000;
+      }
+      80% {
+        text-shadow: 2px 2px #0ff, -2px -2px #0f0;
       }
       100% {
-        transform: rotateX(0);
-        opacity: 1;
+        text-shadow: -2px -2px #f0f, 2px 2px #ff0;
       }
     }
-
-    footer {
-      padding: 2rem;
-      text-align: center;
-      background: #111;
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.95; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1 class="glitch">Anti Security</h1>
+    <p>Your partner in AI-driven cybersecurity, VAPT, and compliance automation.</p>
+  </header>
 
-  <section class="hero">
-    <div class="content">
-      <h1 class="section-title">Anti Security</h1>
-      <p>Your partner in AI-driven cybersecurity, VAPT, and compliance automation.</p>
-    </div>
+  <div class="bg-image"></div>
+
+  <section class="fadeIn">
+    <h2>We Are the Watchers</h2>
+    <p>
+      Anti Security is an initiative born from a vision — to challenge the norms of digital defense using automation,
+      AI, and creativity. We believe in not just preventing attacks but simulating them before they happen.
+    </p>
   </section>
 
-  <section class="section-pattern">
-    <div class="pattern"></div>
-    <div class="content">
-      <h2 class="section-title">Our Mission</h2>
-      <p>We empower companies to proactively defend against threats using intelligent automation and continuous security assessment.</p>
-    </div>
+  <section class="ascii">
+<pre>
+  _______        _   _     _               _            
+ |__   __|      | | (_)   | |             (_)           
+    | | ___  ___| |_ _  __| | ___  ___     _ _ __ ___   
+    | |/ _ \/ __| __| |/ _` |/ _ \/ __|   | | '_ ` _ \  
+    | |  __/\__ \ |_| | (_| |  __/\__ \ _ | | | | | | | 
+    |_|\___||___/\__|_|\__,_|\___||___(_)|_|_| |_| |_| 
+</pre>
   </section>
 
-  <section class="section-pattern">
-    <div class="pattern"></div>
-    <div class="content">
-      <h2 class="section-title">What We Offer</h2>
-      <p>AI-based VAPT tools, Security Posture Assessment, Compliance Automation, and 24/7 Red-Team-as-a-Service (RaaS).</p>
-    </div>
+  <section class="fadeIn">
+    <h2>Everything Is Connected</h2>
+    <p>
+      No system is isolated. Our solutions trace paths across networks, services, users, and vulnerabilities.
+      We embrace the interconnectedness of the digital world and use it to create smarter protection.
+    </p>
+    <img src="a2a3bd00-db4f-4e20-9d28-d705c8e277b9.png" alt="Everything Is Connected" style="width: 80%; margin-top: 2rem; border: 1px solid #444;"/>
   </section>
 
-  <footer>
-    &copy; 2025 Anti Security. All rights reserved.
+  <footer style="text-align:center; padding: 2rem; border-top: 1px solid #333;">
+    <p>&copy; 2025 Anti Security. All rights reserved.</p>
   </footer>
 </body>
 </html>
