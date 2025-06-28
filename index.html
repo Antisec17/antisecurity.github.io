@@ -13,15 +13,17 @@
       overflow-x: hidden;
     }
     header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #0f0f0f, #050505);
-      text-align: center;
-      animation: flicker 3s infinite alternate;
-    }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Move content to top */
+  align-items: center;
+  padding-top: 4rem;            /* Adds spacing from top */
+  background: linear-gradient(135deg, #0f0f0f, #050505);
+  text-align: center;
+  animation: flicker 3s infinite alternate;
+}
+
     h1 {
       font-size: 15rem;
       margin-bottom: 1rem;
