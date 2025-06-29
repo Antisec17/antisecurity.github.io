@@ -1,155 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anti Security</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anti Security - Cyber Defense Reimagined</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Courier New', Courier, monospace;
-      background-color: black;
-      color: white;
-      overflow-x: hidden;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;  /* Move content to top */
-  align-items: center;
-  padding-top: 4rem;            /* Adds spacing from top */
-  background: linear-gradient(135deg, #0f0f0f, #050505);
-  text-align: center;
-  animation: flicker 3s infinite alternate;
-}
 
-    h1 {
-      font-size: 15rem;
-      margin-bottom: 1rem;
+    body, html {
+      height: 100%;
+      scroll-behavior: smooth;
     }
-    p {
-      font-size: 2rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    section {
-      padding: 5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .glitch {
-      font-size: 2rem;
-      color: #0f0;
-      text-shadow: 2px 2px #f00, -2px -2px #00f;
-      animation: glitch 0.6s infinite;
-    }
-    .ascii {
-      white-space: pre-wrap;
-      font-family: monospace;
-      background: #111;
-      padding: 2rem;
-      border: 1px solid #333;
-      max-width: 90vw;
-      overflow-x: auto;
-    }
-    .bg-image {
-      background-image: url('af8ffcde-e32c-430a-8742-f91d7ed95489.png');
-      background-size: cover;
+
+    .parallax {
+      height: 100vh;
+      background-attachment: fixed;
       background-position: center;
-      width: 100%;
-      height: 60vh;
-      margin: 3rem 0;
-      opacity: 0.1;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 0 5px #000;
+      text-align: center;
+      padding: 2rem;
     }
-    .fadeIn {
-      animation: fadeInUp 2s ease-out forwards;
-      opacity: 0;
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #111;
+      color: #ddd;
     }
-    @keyframes fadeInUp {
-      from {
-        transform: translateY(40px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+
+    .section h2 {
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
     }
-    @keyframes glitch {
-      0% {
-        text-shadow: 2px 2px #f00, -2px -2px #00f;
-      }
-      20% {
-        text-shadow: -2px 2px #0f0, 2px -2px #f0f;
-      }
-      40% {
-        text-shadow: 2px -2px #0ff, -2px 2px #ff0;
-      }
-      60% {
-        text-shadow: -2px -2px #fff, 2px 2px #000;
-      }
-      80% {
-        text-shadow: 2px 2px #0ff, -2px -2px #0f0;
-      }
-      100% {
-        text-shadow: -2px -2px #f0f, 2px 2px #ff0;
-      }
-    }
-    @keyframes flicker {
-      0% { opacity: 1; }
-      50% { opacity: 0.95; }
-      100% { opacity: 1; }
+
+    .section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1 class="glitch">Anti Security</h1>
-    <p>Defending Your Digital Frontier</p>
-    
-     <img src="skull.jpg" alt="Skull logo" width="300" height="300" style="margin-top: 2rem;">
-  </header>
 
-  <div class="bg-image"></div>
+  <div class="parallax" style="background-image: url('bg1.jpg');">
+    <div>
+      <h1 style="font-size: 4rem;">Anti Security</h1>
+      <p style="font-size: 1.5rem;">We Hack. We Learn. We Harden.</p>
+    </div>
+  </div>
 
-  <!-- Image above the Watchers section -->
-<div style="text-align: center; margin-top: 40px;">
-  <img src="sk.jpg" alt="Anti Security Aesthetic" style="max-width: 80%; height: auto; border-radius: 8px; box-shadow: 0 0 15px #00ffcc;">
-</div>
+  <div class="section">
+    <h2>Red Team Operations</h2>
+    <p>We simulate real-world attacks to identify your weaknesses before adversaries do. Our red team tools and methods mirror today’s most advanced threat actors.</p>
+  </div>
 
+  <div class="parallax" style="background-image: url('bg2.jpg');">
+    <div>
+      <h1 style="font-size: 3rem;">Compliance Automation</h1>
+    </div>
+  </div>
 
-  <section class="fadeIn">
-    <h2>We Are the Watchers</h2>
-    <p>
-      Anti Security is an initiative born from a vision — to challenge the norms of digital defense using automation,
-      AI, and creativity. We believe in not just preventing attacks but simulating them before they happen.
-    </p>
-  </section>
+  <div class="section">
+    <h2>AI-Driven Defense</h2>
+    <p>Our in-house AI learns from attack patterns, simulates breach paths, and assists in hardening infrastructure in real-time.</p>
+  </div>
 
-  <section class="ascii">
-<pre>
-__        __           _            _               _            
-\ \      / /__  _ __  | |__   ___  | | _____   __ _(_)_ __   ___ 
- \ \ /\ / / _ \| '__| | '_ \ / _ \ | |/ / _ \ / _` | | '_ \ / _ \
-  \ V  V / (_) | |    | | | |  __/ |   < (_) | (_| | | | | |  __/
-   \_/\_/ \___/|_|    |_| |_|\___| |_|\_\___/ \__, |_|_| |_|\___|
-                                               |___/             
-</pre>
-  </section>
+  <div class="parallax" style="background-image: url('bg3.jpg');">
+    <div>
+      <h1 style="font-size: 3rem;">Simulate Before You Secure</h1>
+    </div>
+  </div>
 
-  <section class="fadeIn">
-    <h2>Everything Is Connected</h2>
-    <p>
-      No system is isolated. Our solutions trace paths across networks, services, users, and vulnerabilities.
-      We embrace the interconnectedness of the digital world and use it to create smarter protection.
-    </p>
-    <img src="eve.jpg" alt="Everything Is Connected" style="width: 80%; margin-top: 2rem; border: 1px solid #444;"/>
-  </section>
+  <div class="section">
+    <h2>Security as a Mindset</h2>
+    <p>At Anti Security, we believe that true resilience comes from understanding offense. We help businesses think like attackers to build smarter defenses.</p>
+  </div>
 
-  <footer style="text-align:center; padding: 2rem; border-top: 1px solid #333;">
-    <p>&copy; 2025 Anti Security. All rights reserved.</p>
-  </footer>
 </body>
 </html>
