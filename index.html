@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mountain Scroll Effect</title>
+  <title>AntiSecurity</title>
   <style>
     * {
       margin: 0;
@@ -11,81 +12,119 @@
       box-sizing: border-box;
     }
 
-    body, html {
-      height: 100%;
-      scroll-behavior: smooth;
-      font-family: Arial, sans-serif;
+    body {
+      font-family: 'Arial Black', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      overflow-x: hidden;
     }
 
-    .parallax {
+    header {
       height: 100vh;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .parallax.mountain-top {
-      background-image: url('mountain-top.jpg');
-    }
-
-    .parallax.mountain-mid {
-      background-image: url('mountain-mid.jpg');
-    }
-
-    .parallax.mountain-base {
-      background-image: url('mountain-base.jpg');
-    }
-
-    .content {
-      height: 100vh;
+      background: linear-gradient(#0f0f0f, #1a1a1a);
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      background-color: #222;
-      color: #fff;
+      align-items: center;
       text-align: center;
-      padding: 2rem;
+      position: relative;
     }
 
-    h1 {
+    header h1 {
+      font-size: 5rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      animation: glitch 1s infinite;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.5rem;
+      color: #ccc;
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 2px #ff0000;
+      }
+      25% {
+        text-shadow: -2px -2px #00ffea;
+      }
+      50% {
+        text-shadow: 2px -2px #00ff00;
+      }
+      75% {
+        text-shadow: -2px 2px #ff00ff;
+      }
+      100% {
+        text-shadow: 2px 2px #ff0000;
+      }
+    }
+
+    section {
+      padding: 100px 50px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-attachment: fixed;
+    }
+
+    .about {
+      background: #141414;
+    }
+
+    .capabilities {
+      background: #1e1e1e;
+    }
+
+    .testimonials {
+      background: #121212;
+    }
+
+    .contact {
+      background: #0a0a0a;
+    }
+
+    h2 {
       font-size: 3rem;
+      margin-bottom: 30px;
     }
 
     p {
       font-size: 1.2rem;
+      line-height: 1.6;
       max-width: 800px;
+      margin: auto;
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <h1>AntiSecurity</h1>
+    <p>cheaper, better</p>
+  </header>
 
-  <div class="parallax mountain-base"></div>
+  <section class="about">
+    <h2>About Us</h2>
+    <p>We are a cybersecurity company blending artistic innovation with deep tech. AntiSecurity crafts security ecosystems that are both aesthetically unique and technologically bulletproof. Every deployment is built with intention, flair, and resistance at its core.</p>
+  </section>
 
-  <div class="content">
-    <div>
-      <h1>Welcome to the Mountain</h1>
-      <p>Begin your ascent as we climb through the elevation of ideas and discovery.</p>
-    </div>
-  </div>
+  <section class="capabilities">
+    <h2>Capabilities</h2>
+    <p>From VAPT to red-team simulations, AI-powered reconnaissance, and autonomous compliance management — our tools are built not only to protect, but to evolve. Every site we deploy learns and adapts to growing threats.</p>
+  </section>
 
-  <div class="parallax mountain-mid"></div>
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <p>“AntiSecurity didn’t just build our defense — they designed it like a masterpiece. Art and code collided, and we’ve never felt safer.” – A Happy Client</p>
+  </section>
 
-  <div class="content">
-    <div>
-      <h1>Halfway Up</h1>
-      <p>The view begins to change. Each step reveals a new layer of understanding.</p>
-    </div>
-  </div>
-
-  <div class="parallax mountain-top"></div>
-
-  <div class="content">
-    <div>
-      <h1>The Summit</h1>
-      <p>You’ve reached the peak. Look around and reflect on the journey upward.</p>
-    </div>
-  </div>
-
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out to AntiSecurity and let’s redefine digital defense together. Email us at: contact@antisec.ai</p>
+  </section>
 </body>
+
 </html>
