@@ -2,113 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AntiSecurity</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Courier New', monospace;
-      background: #0a0a0a;
+      background: linear-gradient(to bottom, #000000, #111111);
       color: white;
-      overflow-x: hidden;
+      text-align: center;
+      padding: 0 1rem;
     }
 
-    header.hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(to bottom, #111, #000);
-      padding: 2rem;
+    header {
+      padding-top: 4rem;
     }
 
-    .title {
-      font-size: 5rem;
+    h1 {
+      font-size: 4rem;
       font-style: italic;
       font-weight: bold;
-      color: white;
+      margin-bottom: 0.5rem;
     }
 
     .slogan {
       font-size: 1.5rem;
       font-style: italic;
-      margin-top: 1rem;
       color: #ccc;
+      margin-bottom: 2rem;
     }
 
     .hero-image {
-      margin-top: 2rem;
-      max-width: 400px;
-      width: 80%;
+      display: block;
+      max-width: 90vw;
+      max-height: 60vh;
+      width: auto;
       height: auto;
-      object-fit: contain;
-      border-radius: 10px;
-    }
-
-    main {
-      padding: 4rem 2rem;
-      background-color: #111;
+      margin: 0 auto 3rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
 
     section {
-      margin-bottom: 4rem;
+      padding: 3rem 1rem;
     }
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       line-height: 1.6;
-      color: #ccc;
-    }
-
-    @media screen and (max-width: 600px) {
-      .title {
-        font-size: 3rem;
-      }
-
-      .slogan {
-        font-size: 1.2rem;
-      }
+      max-width: 800px;
+      margin: 0 auto;
+      color: #ddd;
     }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1 class="title">ANTISECURITY</h1>
-    <p class="slogan">cheaper, better</p>
-    <img src="eve.jpg" alt="AntiSecurity Art" class="hero-image" />
+  <header>
+    <h1>ANTISECURITY</h1>
+    <div class="slogan">cheaper, better</div>
+    <img src="eve.jpg" alt="AntiSecurity Visual" class="hero-image" />
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>We are a cybersecurity AI startup blending technical brilliance with creative design. Our AI-first philosophy makes us agile, cost-effective, and fast.</p>
-    </section>
+  <section>
+    <h2>About</h2>
+    <p>
+      We are a cybersecurity AI startup blending technical brilliance with creative design.
+      Our AI-first philosophy makes us agile, cost-effective, and fast.
+    </p>
+  </section>
 
-    <section id="capabilities">
-      <h2>Capabilities</h2>
-      <p>We deliver red-teaming automation, external attack surface mapping, compliance automation, and proactive threat analysis using our internal AI tooling.</p>
-    </section>
+  <section>
+    <h2>Capabilities</h2>
+    <p>
+      We deliver red-teaming automation, external attack surface mapping, compliance automation,
+      and proactive threat analysis using our internal AI tooling.
+    </p>
+  </section>
 
-    <section id="testimonials">
-      <h2>Testimonials</h2>
-      <p>"The AntiSecurity AI agent cut our VAPT time by 60%. Brilliant!" – CISO, Mid-size Fintech</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: ruchiragarwal17@gmail.com <br>GitHub: github.com/antisec17</p>
-    </section>
-  </main>
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Get in touch with us at <a href="mailto:contact@antisecurity.ai" style="color:#4af;">contact@antisecurity.ai</a>
+    </p>
+  </section>
 </body>
 </html>
